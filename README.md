@@ -34,9 +34,8 @@ and be able to identify objects, people, animals and much more!
 
 # Model Building
 
-The Convolutional Neural Network (CNN) is a subtype of Neural Networks that is mainly used for applications in image and speech recognition. 
-Its built-in convolutional layer reduces the high dimensionality of images without losing its information. 
-That is why CNNs are especially suited for this use case.
+The [Convolutional Neural Network (CNN)](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53) is a subtype of Neural Networks that is mainly used for applications in image and speech recognition. 
+Its built-in convolutional layer reduces the high dimensionality of images without losing its information, making CNNs well suited for this use case.
 
 Since this dataset is relatively small, our neural network does not have much to learn on.
 So we'll use Transfer Learning to train the model to save computational time and get accurate results.
@@ -44,11 +43,13 @@ So we'll use Transfer Learning to train the model to save computational time and
 The step by step process for the code is within in the 'notebooks' folder.
 I started with a baseline CNN to compare results with the model built with transfer learning.
 
-models and preprocessed data are stores the 'saves' directory within the repo
+models and preprocessed data are stored in the 'saves' directory
 
 # Summary/Moving Forward
 
-With the final model built with the Effnet pretained state of the art model, we were able to classify the brain tumor images with 99.97% accuracy
+With the final model built with the Effnet pretained state of the art model, we were able to classify the brain tumor images with 99.97% accuracy on our small dataset and save a lot of processing time as well.
+
+Moving forward I would like to explore more transfer learning application with different datasets. 
 
 
 
