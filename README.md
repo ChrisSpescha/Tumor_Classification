@@ -1,40 +1,30 @@
 # Brain Tumor Classification
 
-![](data/photos/brain_pic.png)
+Goal: The goal for this project is too accurately classify tumors within a MRI scan, or identify that there is no tumor at all. 
 
-Technology is in a constant state of advance, lucky for us mortals we can use these tools to improve medical devices and hopefully our overall quality of life. <br>
-In this project I have applied Machine Learning algorithms to identify brain tumors within MRI scans.
+In today’s medical field, technology plays a big role when it comes to patient care. 
 
-# Primer
+We have LOADS of medical data in the world it makes it a great target for a Data Scientist to apply their skills too.
 
-If you have no experience using machine learning this section is for you. Here I will generalize some basic concepts so that hopefully you can read through the 
-rest of this document with minimal head scratches.
 
-First lets understand our data, which is about 3000 photos of brain MRIs. <br>
-'How does the computer look at these photos?' you might ask. <br>
-The simple answer is matrices, a matrix simplified is just a square or rectangular box filled with numbers visualized below is a simple 2x3 matrix. <br>
-<br>
-![](data/photos/2x2.png)
-![](data/photos/2x3.png)
-<br>
-<br>
-Now, if you have ever dealt with photo sizes, or screen settings, you may recall measurements like 1920x1080 for your computer screen, or dimension of 
-digital photos like 150x150. <br> 
-Lets take those picture dimensions (150x150) as an example
+# EDA
 
-The photograph is 150 pixels wide by 150 tall. Which means there is 22,500 pixels within this picture! <br>
-If we imagine the the picture dimesions as a large matrix with each pixel being a number, we are now looking at it similar to the way a computer would! <br>
-Each number specifying what color the pixel should be, thus creating a digital photograph! visualization below <br>\
-<br>
-![](data/photos/image_matrix.png)
+Beggining with some exploratory data analysis, where we do some investigating to further understand our data
 
-<br>
-The computer will be able to learn patterns within the matrix of numbers with Machine learning algorithms,
-and be able to identify objects, people, animals and much more!
+Our data is comprised of about 3000 MRI scans
+
+![](data/photos/sample_images.png)
+
+The dimensions being (150, 150, 3) for each of these photos
+
+The data set is mostly balanced besides the 'no_tumor' labels are shy, though I do not see our network having issues with this
+
+![](data/photos/tumor_count.png)
 
 # Model Building
 
-The [Convolutional Neural Network (CNN)](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53) is a subtype of Neural Networks that is mainly used for applications in image and speech recognition. 
+The [Convolutional Neural Network (CNN)](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53) is a subtype of Neural Network that is mainly used for applications in image and speech recognition. 
+
 Its built-in convolutional layer reduces the high dimensionality of images without losing its information, making CNNs well suited for this use case.
 
 Since this dataset is relatively small, our neural network does not have much to learn on.
@@ -49,13 +39,4 @@ models and preprocessed data are stored in the 'saves' directory
 
 With the final model built with the Effnet pretained state of the art model, we were able to classify the brain tumor images with 99.97% accuracy on our small dataset and save a lot of processing time as well.
 
-Moving forward I would like to explore more transfer learning application with different datasets. 
-
-
-
-
-
-
-
-
-
+![](data/photos/confusion_matrix.png)
