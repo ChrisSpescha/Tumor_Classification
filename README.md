@@ -35,3 +35,4 @@ The Convolutional Neural Network (CNN) is a subtype of Neural Networks that is m
 Its built-in convolutional layer reduces the high dimensionality of images without losing its information. 
 That is why CNNs are especially suited for this use case.
 
+
