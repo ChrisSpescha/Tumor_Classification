@@ -17,7 +17,8 @@ Our data is comprised of about 3000 MRI scans
 
 The dimensions being (150, 150, 3) for each of these photos
 
-The data set is mostly balanced besides the 'no_tumor' labels are shy, though I do not see our network having issues with this
+The data set is mostly balanced besides the 'no_tumor' labels beinga bit shy
+Though I do not see our network having issues with this
 
 ![](data/photos/tumor_count.png)
 
